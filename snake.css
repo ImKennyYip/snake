@@ -1,4 +1,49 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    
 }
+
+#scoreDisplay{
+    font-weight: 800;
+    color: #fff;
+}
+
+h1{
+    background-color: #0C2D57;;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0C2D57;
+  }
+  
+  .refresh-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 15px;
+  }
+  
+  .refresh-button:hover {
+    background-color: #45a049;
+  }
+  
