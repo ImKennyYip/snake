@@ -15,6 +15,8 @@ var velocityY = 0;
 
 var snakeBody = [];
 
+var score=0;
+
 //food
 var foodX;
 var foodY;
@@ -46,6 +48,9 @@ function update() {
 
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
+        score++;
+        document.getElementById('scoreDisplay').textContent = 'Score: ' + score;
+        console.log(score);
         placeFood();
     }
 
@@ -67,13 +72,13 @@ function update() {
     //game over conditions
     if (snakeX < 0 || snakeX > cols*blockSize || snakeY < 0 || snakeY > rows*blockSize) {
         gameOver = true;
-        alert("Game Over");
+        alert("Well Played! Try Again?");
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
-            alert("Game Over");
+            alert("Well Played! Try Again?");
         }
     }
 }
@@ -103,3 +108,8 @@ function placeFood() {
     foodX = Math.floor(Math.random() * cols) * blockSize;
     foodY = Math.floor(Math.random() * rows) * blockSize;
 }
+
+function refreshPage() {
+    location.reload();
+    score=0;
+  }
